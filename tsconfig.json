@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@skyux-sdk/builder/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false 
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

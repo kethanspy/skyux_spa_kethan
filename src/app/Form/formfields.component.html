@@ -1,0 +1,129 @@
+<main>
+  <div class="formTitle">
+    <h3 id="titleText">Enter Your Details</h3>
+  </div>
+
+  <div
+    style="float: left; width:100%; background-color:rgb(255, 255, 255); padding-top: 30px; padding-left:200px;padding-right: 200px ;">
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="sky-form-group" style="width: 100%; ">
+        <label class="sky-control-label sky-control-label-required" id="label-text" for="firstname">First Name
+        </label>
+        <sky-input-box>
+          <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname1" class="sky-form-control"
+            formControlName="firstname">
+        </sky-input-box>
+      </div>
+      <div *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)">
+        <div class="prompt-msg" [hidden]="!firstname.errors.pattern">
+          Only characters are allowed *
+        </div>
+        <div class="prompt-msg" [hidden]="!firstname.errors.required">
+          First Name is Mandatory *
+        </div>
+        <div class="prompt-msg" [hidden]="!firstname.errors.minlength">
+          Enter Your complete First Name *
+        </div>
+      </div>
+
+      <div class="sky-form-group" style="width: 100%; margin-top: 5px;">
+        <label class="sky-control-label sky-control-label-required" id="label-text" for="lastname">Last Name
+        </label>
+        <sky-input-box>
+          <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname1" class="sky-form-control"
+            formControlName="lastname">
+        </sky-input-box>
+      </div>
+
+      <div *ngIf="!lastname?.valid && (lastnamr?.dirty ||lastname?.touched)">
+        <div class="prompt-msg" [hidden]="!lastname.errors.pattern">
+          Only characters are allowed *
+        </div>
+        <div class="prompt-msg" [hidden]="!lastname.errors.maxLength">
+          Max length allowed is {{lastname.errors.maxlength?.requiredLength}} *
+        </div>
+        <div class="prompt-msg" [hidden]="!lastname.errors.required">
+          Last Name is Mandatory *
+        </div>
+      </div>
+
+
+
+      <div class="sky-form-group" style="width: 100%; margin-top: 5px; ">
+        <label class="sky-control-label sky-control-label-required" id="label-text" for="email">E-mail</label>
+        <sky-input-box>
+          <input type="text" id="email" name="email" [(ngModel)]="email1" class="sky-form-control"
+            formControlName="email">
+        </sky-input-box>
+      </div>
+      <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+        <div class="prompt-msg" [hidden]="!email.errors.required">
+          Email cannot be blank *
+        </div>
+        <div class="prompt-msg" [hidden]="!email.errors.email">
+          Email is invalid *
+        </div>
+      </div>
+
+
+      <div class="sky-form-group" style="width: 100%; margin-top: 5px; ">
+        <label class="sky-control-label sky-control-label-required" id="label-text" for="phone">Phone Number</label>
+        <sky-input-box>
+
+          <sky-phone-field [defaultCountry]="'in'">
+            <input class="sky-form-control" name="phone" id="phone" formControlName="phone" [(ngModel)]="phone1"
+              skyPhoneFieldInput>
+          </sky-phone-field>
+        </sky-input-box>
+      </div>
+      <div *ngIf="!phone.valid && (phone.dirty ||phone.touched)">
+        <div class="prompt-msg" [hidden]="!phone.errors">
+          Please check your Number with the country
+        </div>
+       
+      </div> 
+        
+      
+
+
+      <div class="sky-form-group" style="width: 100%; margin-top: 5px; ">
+        <sky-input-box>
+          <label class="sky-control-label sky-control-label-required" id="label-text" for="Date">
+            DOB
+          </label>
+          <sky-datepicker>
+            <input formControlName="date" class="sky-form-control" [(ngModel)]="date1" id="date" name="date"
+              skyDatepickerInput skyId type="text" #dateInput="skyId" />
+          </sky-datepicker>
+        </sky-input-box>
+      </div>
+
+      <div class="sky-form-group" style="width: 100%; margin-top: 5px; ">
+        <sky-input-box>
+          <label class="sky-control-label  sky-control-label-required" id="label-text" for="address">
+            ADDRESS
+          </label>
+          <textarea type="text" id="address" name="address" [(ngModel)]="address1" class="sky-form-control"
+            formControlName="address"></textarea>
+        </sky-input-box>
+        <div *ngIf="!address.valid && (address.dirty ||address.touched)">
+          <div class="prompt-msg" [hidden]="!address.errors.required">
+            Address Field cannot be blank *
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="sky-form-group" style="width: 100%; margin-top: 10px; text-align: center; ">
+        <p>
+          <button class="sky-btn sky-btn-primary" id="submitBtn" type="submit"
+            [disabled]="!contactForm.valid">Submit</button>
+        </p>
+      </div>
+    </form>
+
+  </div>
+
+</main>

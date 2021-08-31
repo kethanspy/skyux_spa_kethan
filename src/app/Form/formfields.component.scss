@@ -1,0 +1,42 @@
+.formTitle{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 0%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#titleText{
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px; 
+    font-size:x-large;  
+}
+
+sky-input-box{
+    width: 100%;
+    
+}
+
+.prompt-msg{
+    color: rgb(199, 1, 1);
+    font-size: small;
+}
+
+#label-text{
+    font-size:medium; 
+     color: rgb(0, 0, 0);
+}
+
+.phone-field-demo {
+    width: 50%;
+  
+    &.ng-valid ::ng-deep .sky-phone-field {
+      margin-bottom: 0;
+    }
+  }
+
+#submitBtn{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
