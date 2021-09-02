@@ -24,8 +24,8 @@ export class UserProfileComponent implements OnInit {
     {
       colId: 'context',
       headerName: '',
-      maxWidth: 50,
       sortable: false,
+      minWidth: 45,
       cellRendererFramework: SkyDataEntryGridContextMenuComponent
     },
     {
@@ -40,22 +40,18 @@ export class UserProfileComponent implements OnInit {
     },
     {
       field: 'phoneNumber',
-      headerName: 'Contact No.',
-      maxWidth: 140,
-      minWidth: 135,
+      headerName: 'Contact Number',
       type: SkyCellType.Text
     },
     {
       field: 'email',
-      headerName: 'Email',
+      headerName: 'E-mail Address',
       type: SkyCellType.Text
     },
     {
       field: 'date',
       headerName: 'DOB',
-      maxWidth: 110,
       type: SkyCellType.Text
-      // valueFormatter: this.endDateFormatter
     },
     {
       field: 'address',
