@@ -11,7 +11,7 @@
         <label class="sky-control-label sky-control-label-required" id="label-text" for="firstname">First Name
         </label>
         <sky-input-box>
-          <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname1" class="sky-form-control"
+          <input type="text" id="firstname" [(ngModel)]="firstname1" class="sky-form-control"
             formControlName="firstname">
         </sky-input-box>
       </div>
@@ -67,24 +67,23 @@
       </div>
 
 
-      <div class="sky-form-group" style="width: 100%; margin-top: 5px; ">
-        <label class="sky-control-label sky-control-label-required" id="label-text" for="phone">Phone Number</label>
+      <div class="sky-form-group" style="max-width: 100%">
         <sky-input-box>
-
-          <sky-phone-field [defaultCountry]="'in'">
-            <input class="sky-form-control" name="phone" id="phone" formControlName="phone" [(ngModel)]="phone1"
-              skyPhoneFieldInput>
+          <label for="contact" class="sky-control-label sky-control-label-required" style="font-size: 16px">
+            Contact Number
+          </label>
+          <sky-phone-field [defaultCountry]="'us'">
+            <input skyPhoneFieldInput class="sky-form-control" name="phone" formControlName="phone" [(ngModel)]="phone1"
+               id="phone" placeholder="Add 10-digit Contact Number" />
           </sky-phone-field>
         </sky-input-box>
       </div>
-      <div *ngIf="!phone.valid && (phone.dirty ||phone.touched)">
-        <div class="prompt-msg" [hidden]="!phone.errors">
-          Please check your Number with the country
+      <div *ngIf="!phone.valid && (email.dirty ||email.touched) ">
+        <div class="prompt-msg" [hidden]="!phone.errors.required">
+          Phone cannot be blank *
         </div>
-       
-      </div> 
-        
-      
+        </div>
+
 
 
       <div class="sky-form-group" style="width: 100%; margin-top: 5px; ">

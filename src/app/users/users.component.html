@@ -1,4 +1,3 @@
 <app-formfields (onAddUser)="addUser($event)"> </app-formfields>
 
-<app-user-profile *ngFor="let user of users" [user]="user">
-</app-user-profile>
+<app-user-profile [gridData]="users"></app-user-profile>

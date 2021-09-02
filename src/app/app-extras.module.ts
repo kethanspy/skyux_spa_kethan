@@ -6,9 +6,17 @@ import {
   AppSkyModule
 } from './app-sky.module';
 
+import{
+  AgGridModule
+} from 'ag-grid-angular';
+
 @NgModule({
+  imports:[AgGridModule.withComponents([])],
   exports: [
-    AppSkyModule
+    AppSkyModule,
+    AgGridModule
+  
   ]
+  
 })
 export class AppExtrasModule { }

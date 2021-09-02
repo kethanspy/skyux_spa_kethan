@@ -13,14 +13,15 @@ import {
 } from '@skyux/indicators';
 
 import {
-  SkyFluidGridModule
+  SkyFluidGridModule,
+  SkyToolbarModule
 } from '@skyux/layout';
 
 import {
   SkyNavbarModule
 } from '@skyux/navbar';
 
-import{
+import {
   SkyInputBoxModule
 } from '@skyux/forms';
 
@@ -38,8 +39,16 @@ import { SkyIdModule } from '@skyux/core';
 import { SkyDatepickerModule } from '@skyux/datetime';
 import { SkyThemeModule } from '@skyux/theme';
 import { HttpClientModule } from '@angular/common/http';
-import {  SkyPhoneFieldModule } from '@skyux/phone-field';
-import {   SkyStatusIndicatorModule } from '@skyux/indicators';
+import { SkyPhoneFieldModule } from '@skyux/phone-field';
+import { SkyStatusIndicatorModule } from '@skyux/indicators';
+import { SkyAgGridModule } from '@skyux/ag-grid';
+import { SkyDropdownModule } from "@skyux/popovers";
+import { SkyDataEntryGridContextMenuComponent } from './data-entry-grid-context-menu/data-entry-grid-context-menu.component';
+import { SkyDataEntryGridEditModalComponent } from './data-entry-grid-edit-modal/data-entry-grid-edit-modal.component';
+import { SkyModalModule } from '@skyux/modals';
+import { SkySearchModule } from '@skyux/lookup';
+import { SkyGridModule } from '@skyux/grids'
+
 
 @NgModule({
   exports: [
@@ -58,8 +67,22 @@ import {   SkyStatusIndicatorModule } from '@skyux/indicators';
     SkyThemeModule,
     HttpClientModule,
     SkyPhoneFieldModule,
-    SkyStatusIndicatorModule
-  ]
+    SkyStatusIndicatorModule,
+    SkyAgGridModule,
+    SkyDropdownModule,
+    SkyModalModule,
+    SkySearchModule,
+    SkyToolbarModule,
+    SkyGridModule
 
+
+  ],
+  entryComponents: [
+
+    SkyDataEntryGridContextMenuComponent,
+
+    SkyDataEntryGridEditModalComponent
+
+  ]
 })
 export class AppSkyModule { }

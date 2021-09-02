@@ -11,10 +11,10 @@
 // } from '@skyux-sdk/testing';
 
 // import {
-//   UserProfileComponent
-// } from 
+//   DataEntryGridEditModalComponent
+// } from './data-entry-grid-edit-modal.component';
 
-// describe('User profile component', () => {
+// describe('Data entry grid edit modal component', () => {
 
 //   /**
 //    * This configureTestingModule function imports SkyAppTestModule, which brings in all of
@@ -29,7 +29,7 @@
 //   });
 
 //   it('should do something', () => {
-//     const fixture = TestBed.createComponent(UserProfileComponent);
+//     const fixture = TestBed.createComponent(DataEntryGridEditModalComponent);
 
 //     fixture.detectChanges();
 

@@ -11,10 +11,10 @@
 // } from '@skyux-sdk/testing';
 
 // import {
-//   UserProfileComponent
-// } from 
+//   DataEntryGridContextMenuComponent
+// } from './data-entry-grid-context-menu.component';
 
-// describe('User profile component', () => {
+// describe('Data entry grid context menu component', () => {
 
 //   /**
 //    * This configureTestingModule function imports SkyAppTestModule, which brings in all of
@@ -29,7 +29,7 @@
 //   });
 
 //   it('should do something', () => {
-//     const fixture = TestBed.createComponent(UserProfileComponent);
+//     const fixture = TestBed.createComponent(DataEntryGridContextMenuComponent);
 
 //     fixture.detectChanges();
 
